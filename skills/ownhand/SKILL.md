@@ -7,6 +7,16 @@ description: Write as the user, in their own voice, with the Ownhand MCP server.
 
 Use the `ownhand` MCP tools for anything the user will send as themselves. Do not rewrite it yourself.
 
+## If the ownhand tools are not available
+
+The plugin adds the server, but the user has to sign in once before its tools appear. If you can't see `write`, `get_hand` and the other ownhand tools, don't write the draft yourself as a stand-in. Tell the user how to connect, in one short message, then wait:
+
+- Claude Code: run `/mcp`, pick `ownhand` (it shows as needing authentication), choose Authenticate, and sign in in the browser. Then ask again.
+- Claude app (web, desktop, mobile): open Customize, then Connectors, find Ownhand and click Connect, sign in, pick a Hand and click Allow. In a chat, turn it on from the + menu under Connectors. Then ask again.
+- Anything else: add the remote MCP server https://ownhand.dev/mcp and sign in. Setup for every client: https://ownhand.dev/connect
+
+Write a plain draft without Ownhand only if the user says to go ahead without it.
+
 1. Call `write` with the draft and the right `occasion`. Pick it from where the text will be posted and who reads it:
    `chat_dm`, `chat_channel`, `email_internal`, `email_formal`, `email_cold`, `email_warm`,
    `proposal_cold`, `proposal_warm`, `pr_description`, `review_comment`, `docs`, `status_update`.
