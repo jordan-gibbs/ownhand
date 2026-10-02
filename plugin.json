@@ -1,0 +1,20 @@
+{
+  "name": "ownhand",
+  "version": "0.3.0",
+  "description": "Drafts messages, emails, replies and PR descriptions in your own voice, fitted to the occasion, and learns from what you send.",
+  "author": {
+    "name": "Thalient Labs",
+    "email": "hi@thalientlabs.ai"
+  },
+  "homepage": "https://ownhand.dev",
+  "repository": "https://github.com/jordan-gibbs/ownhand",
+  "license": "MIT",
+  "keywords": ["mcp", "writing", "voice", "email", "slack", "pull-requests"],
+  "logo": "assets/logo.png",
+  "skills": "skills/",
+  "mcpServers": {
+    "ownhand": {
+      "url": "https://ownhand.dev/mcp"
+    }
+  }
+}
