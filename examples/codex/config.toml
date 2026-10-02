@@ -4,5 +4,3 @@
 [mcp_servers.ownhand]
 url = "https://ownhand.dev/mcp"
 
-# With an API key instead of sign-in:
-# http_headers = { "Authorization" = "Bearer <OWNHAND_API_KEY>", "X-Ownhand-Hand" = "prof_..." }

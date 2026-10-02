@@ -1,8 +1,0 @@
-{
-  "mcpServers": {
-    "ownhand": {
-      "url": "https://ownhand.dev/mcp",
-      "headers": { "Authorization": "Bearer <OWNHAND_API_KEY>", "X-Ownhand-Hand": "prof_..." }
-    }
-  }
-}

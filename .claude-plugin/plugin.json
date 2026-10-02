@@ -11,5 +11,13 @@
   "homepage": "https://ownhand.dev/docs",
   "repository": "https://github.com/jordan-gibbs/ownhand",
   "license": "MIT",
-  "keywords": ["mcp", "writing", "voice", "email", "slack", "pull-requests"]
+  "keywords": [
+    "mcp",
+    "writing",
+    "voice",
+    "email",
+    "slack",
+    "pull-requests"
+  ],
+  "privacyPolicyUrl": "https://ownhand.dev/privacy"
 }

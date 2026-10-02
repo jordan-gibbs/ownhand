@@ -48,16 +48,9 @@ goose://extension?url=https%3A%2F%2Fownhand.dev%2Fmcp&type=streamable_http&id=ow
 
 More configs, including VS Code (`.vscode/mcp.json`) and Codex (`config.toml`), are in [`examples/`](examples/). The live version of this table is at https://ownhand.dev/connect.
 
-### API key instead
+### Scripts and CI
 
-For clients without sign-in, scripts and CI. Create a key in the [dashboard](https://ownhand.dev/dashboard#keys) and send it as a header. `X-Ownhand-Hand` is optional and sets the default Hand.
-
-```bash
-claude mcp add --scope user --transport http ownhand https://ownhand.dev/mcp \
-  --header "Authorization: Bearer $OWNHAND_API_KEY" --header "X-Ownhand-Hand: prof_..."
-```
-
-See [`examples/api-key.mcp.json`](examples/api-key.mcp.json). Treat a key like a password.
+For clients without browser sign-in, an API key option is described in the docs: https://ownhand.dev/docs#connect
 
 ## First run
 
