@@ -1,0 +1,8 @@
+# ~/.codex/config.toml
+# Or run: codex mcp add ownhand --url https://ownhand.dev/mcp
+# Sign in with: codex mcp login ownhand
+[mcp_servers.ownhand]
+url = "https://ownhand.dev/mcp"
+
+# With an API key instead of sign-in:
+# http_headers = { "Authorization" = "Bearer <OWNHAND_API_KEY>", "X-Ownhand-Hand" = "prof_..." }

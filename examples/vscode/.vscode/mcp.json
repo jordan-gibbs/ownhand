@@ -1,0 +1,8 @@
+{
+  "servers": {
+    "ownhand": {
+      "type": "http",
+      "url": "https://ownhand.dev/mcp"
+    }
+  }
+}

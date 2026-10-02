@@ -1,0 +1,15 @@
+{
+  "name": "ownhand",
+  "description": "Ownhand for Claude Code: write in your own voice.",
+  "owner": {
+    "name": "Thalient Labs",
+    "email": "hi@thalientlabs.ai"
+  },
+  "plugins": [
+    {
+      "name": "ownhand",
+      "source": "./",
+      "description": "Drafts messages, emails, replies and PR descriptions in your own voice, and learns from what you send."
+    }
+  ]
+}

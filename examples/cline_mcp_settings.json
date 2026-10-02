@@ -1,0 +1,5 @@
+{
+  "mcpServers": {
+    "ownhand": { "type": "streamableHttp", "url": "https://ownhand.dev/mcp" }
+  }
+}

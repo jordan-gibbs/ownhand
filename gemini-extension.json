@@ -1,0 +1,11 @@
+{
+  "name": "ownhand",
+  "version": "0.3.0",
+  "description": "Agents, writing like you. Drafts in your own voice and learns from what you send.",
+  "mcpServers": {
+    "ownhand": {
+      "httpUrl": "https://ownhand.dev/mcp"
+    }
+  },
+  "contextFileName": "GEMINI.md"
+}

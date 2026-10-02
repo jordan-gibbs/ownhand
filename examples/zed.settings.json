@@ -1,0 +1,5 @@
+{
+  "context_servers": {
+    "ownhand": { "url": "https://ownhand.dev/mcp" }
+  }
+}
