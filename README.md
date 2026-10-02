@@ -92,7 +92,7 @@ $1 free to start. Then you add credit and pay for the tokens you use, about half
 - Stored: your account details, your Hands (samples, style card, learned rules), your requests and the feedback you send.
 - Not stored: thread messages your agent passes as context. They are used for that one request.
 - Not sold, not shared for advertising, and not used to train our own models.
-- Feedback and samples go to the learning model, whose provider may use them to improve its models. If you don't want that, don't send feedback or add samples.
+- Writing and learning run on Muse Spark through OpenRouter's contributor tier, so the provider may use everything Ownhand processes (drafts, samples, thread context, feedback) to improve its models. Don't use Ownhand for text you want kept out of that.
 - You can delete a Hand or revoke a key at any time.
 
 Read the full policy: https://ownhand.dev/privacy.
