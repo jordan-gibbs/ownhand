@@ -1,6 +1,6 @@
 {
   "name": "ownhand",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Agents, writing like you. Drafts in your own voice and learns from what you send.",
   "mcpServers": {
     "ownhand": {

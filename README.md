@@ -2,7 +2,7 @@
 
 Agents, writing like you.
 
-Ownhand is a remote MCP server that writes text in your own voice, fitted to where it is going: a Slack DM, a cold email, a PR description. It learns your voice from 5 to 10 things you wrote, then keeps learning from what you actually send.
+Ownhand is a remote MCP server that writes text in your own voice, fitted to where it is going: a Slack DM, a cold email, a PR description. It learns your voice from things you wrote, such as about 20 sent emails or Slack messages your agent pulls with your OK, or 5 to 10 you paste, then keeps learning from what you actually send.
 
 [![Add to Cursor](https://cursor.com/deeplink/mcp-install-dark.svg)](https://cursor.com/en/install-mcp?name=ownhand&config=eyJ1cmwiOiJodHRwczovL293bmhhbmQuZGV2L21jcCJ9)
 [![Add to VS Code](https://img.shields.io/badge/VS_Code-Add_Ownhand-0098FF?logo=visualstudiocode&logoColor=white)](https://insiders.vscode.dev/redirect/mcp/install?name=ownhand&config=%7B%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Fownhand.dev%2Fmcp%22%7D)
@@ -54,7 +54,7 @@ For clients without browser sign-in, an API key option is described in the docs:
 
 ## First run
 
-Once connected, say: **"Set up my Ownhand Hand."** The agent asks for 5 to 10 things you wrote yourself (Slack messages, emails, PR descriptions) and how you'd describe your writing, then calls `create_hand`. Clients that show MCP prompts also list `set_up_my_hand`.
+Once connected, say: **"Set up my Ownhand Hand."** If the agent has an email or Slack tool, it offers to pull about 20 messages you sent, after asking, and skips anything you didn't write. Or you paste 5 to 10 things you wrote yourself (Slack messages, emails, PR descriptions). It also asks how you'd describe your writing, then calls `create_hand`. More real samples make a better Hand, and the style card rebuilds as samples grow. Clients that show MCP prompts also list `set_up_my_hand`.
 
 To make your agent use Ownhand without being asked, paste [`AGENTS.md`](AGENTS.md) into your `CLAUDE.md`, `AGENTS.md`, `.cursorrules` or custom instructions.
 
