@@ -20,6 +20,7 @@ Write a plain draft without Ownhand only if the user says to go ahead without it
 1. Call `write` with the draft and the right `occasion`. Pick it from where the text will be posted and who reads it:
    `chat_dm`, `chat_channel`, `email_internal`, `email_formal`, `email_cold`, `email_warm`,
    `proposal_cold`, `proposal_warm`, `pr_description`, `review_comment`, `docs`, `status_update`.
+   Call `get_hand` first and check `custom_occasions`: if one of the user's custom occasions fits (for example `linkedin_dm`), prefer it over a built-in.
    Leave it out if you truly cannot tell.
 2. For a reply, set `is_reply: true` and pass the last messages of the thread verbatim, oldest first, as `context_messages`.
    If you cannot see the thread, ask the user to paste it. Never summarize or invent messages.
