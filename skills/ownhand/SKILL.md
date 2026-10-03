@@ -34,7 +34,7 @@ Write a plain draft without Ownhand only if the user says to go ahead without it
 If a call says no Hand is selected, call `get_hand()`. If the user has no Hand, offer the routes you can do. If you have an email tool (such as Gmail),
 offer to pull about 20 emails they sent. If you can reach Slack or Teams (a connector or a browser tool), offer about 20 of
 their own messages. Ask first and accept a no. Keep only text the user wrote: cut quoted replies, forwards and signatures,
-and skip AI drafts and anything sensitive. Or ask them to paste 5 to 10 things they wrote. 5 is the minimum; about 20 is better.
+and skip AI drafts and anything sensitive. Or ask them to paste 5 to 10 things they wrote. A Hand works with fewer, but it sounds generic until it has about 5 to 20 real samples or has learned from feedback.
 Then call `create_hand`, or `update_hand` with `add_samples` for an empty Hand, one batch per source with `samples_occasion`.
 If a call says the user is out of credit, give them the billing link it returns.
 

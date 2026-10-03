@@ -54,7 +54,7 @@ For clients without browser sign-in, an API key option is described in the docs:
 
 ## First run
 
-Once connected, say: **"Set up my Ownhand Hand."** If the agent has an email or Slack tool, it offers to pull about 20 messages you sent, after asking, and skips anything you didn't write. Or you paste 5 to 10 things you wrote yourself (Slack messages, emails, PR descriptions). It also asks how you'd describe your writing, then calls `create_hand`. More real samples make a better Hand, and the style card rebuilds as samples grow. Clients that show MCP prompts also list `set_up_my_hand`.
+Once connected, say: **"Set up my Ownhand Hand."** If the agent has an email or Slack tool, it offers to pull about 20 messages you sent, after asking, and skips anything you didn't write. Or you paste 5 to 10 things you wrote yourself (Slack messages, emails, PR descriptions). It also asks how you'd describe your writing, then calls `create_hand`. A Hand works with fewer samples but sounds generic until it has about 5 to 20 real ones or has learned from your feedback. The style card rebuilds as samples grow. Clients that show MCP prompts also list `set_up_my_hand`.
 
 To make your agent use Ownhand without being asked, paste [`AGENTS.md`](AGENTS.md) into your `CLAUDE.md`, `AGENTS.md`, `.cursorrules` or custom instructions.
 
@@ -83,7 +83,7 @@ Occasions: `chat_dm`, `chat_channel`, `email_internal`, `email_formal`, `email_c
 1. Your agent calls `write` and shows you the draft. Nothing is sent without your OK.
 2. You send it as is, edit it, or drop it.
 3. Your agent calls `send_feedback` with exactly the text you sent.
-4. Ownhand compares the draft with what you sent and updates your Hand. A reason you state becomes a rule right away. A pattern it only observes has to show up twice. Learning runs in the background, and the Hand's version goes up when it finishes.
+4. Ownhand compares the draft with what you sent and updates your Hand. After you send feedback, a learning pass of a minute or two turns your edits and reasons into proposed rules, which become active once they're confirmed. A reason you state counts as strong evidence, but nothing is instant. The Hand's version number also goes up for style card rebuilds and edits, so don't read it as a sign that learning finished.
 
 You can pin or reject any learned rule with `update_hand`. Learning from your feedback changes only your own Hand.
 
