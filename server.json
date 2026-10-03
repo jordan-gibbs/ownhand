@@ -3,7 +3,7 @@
   "name": "io.github.jordan-gibbs/ownhand",
   "title": "Ownhand",
   "description": "Write in the user's own voice, fitted to the occasion. Learns from the text they actually send.",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "websiteUrl": "https://ownhand.dev",
   "repository": {
     "url": "https://github.com/jordan-gibbs/ownhand",

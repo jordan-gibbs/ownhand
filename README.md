@@ -66,11 +66,13 @@ To make your agent use Ownhand without being asked, paste [`AGENTS.md`](AGENTS.m
 | `send_feedback` | Reports what you did with a draft (`approved`, `edited` with the exact sent text, or `rejected`) so your Hand learns. |
 | `get_hand` | Lists your Hands, or shows what one has learned: style card, rules, sample counts. |
 | `create_hand` | Creates a Hand from texts you wrote yourself. |
-| `update_hand` | Adds samples, sets how you describe your writing, pins, rejects or activates a learned rule, or adds, edits or removes custom occasions. |
+| `update_hand` | Adds samples, sets how you describe your writing, pins, rejects or activates a learned rule, adds, edits or removes custom occasions, or adds, edits or removes people. |
 | `get_account` | Shows your account, credit balance, recent charges and usage. |
 
 Prompts: `set_up_my_hand`, `teach_my_voice`, `reply_to_thread`, `draft_email`.
 Resources: `ownhand://guide` (the agent playbook), `ownhand://occasions` (the occasion table).
+
+Agents should pass `recipient_name`, `recipient_email` when known, and `recipient_notes` to `write`, so drafts fit the person. `update_hand` can add, edit or remove people.
 
 Agents should check `get_hand` for `custom_occasions` and prefer one when it fits. Add, edit or remove them with `update_hand`.
 

@@ -22,6 +22,7 @@ Write a plain draft without Ownhand only if the user says to go ahead without it
    `proposal_cold`, `proposal_warm`, `pr_description`, `review_comment`, `docs`, `status_update`.
    Call `get_hand` first and check `custom_occasions`: if one of the user's custom occasions fits (for example `linkedin_dm`), prefer it over a built-in.
    Leave it out if you truly cannot tell.
+   When the message has a reader, pass `recipient_name`, `recipient_email` when known, and `recipient_notes` (what the user says about them), so drafts fit that person.
 2. For a reply, set `is_reply: true` and pass the last messages of the thread verbatim, oldest first, as `context_messages`.
    If you cannot see the thread, ask the user to paste it. Never summarize or invent messages.
 3. Show the draft exactly as returned. Mention any `unresolved` items. Never send or post anything without the user's OK.
