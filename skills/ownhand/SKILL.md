@@ -33,7 +33,7 @@ Write a plain draft without Ownhand only if the user says to go ahead without it
    Pass the user's own words as `reason` when they say why. This is how the Hand learns. Always do it, without being asked, when the user says they sent it or shares what they sent. If they edit the draft in the chat and call it final, that edit is the sent text.
 5. Put only what the user explicitly asked for (for example "shorter") in `user_instructions`. Never add your own style advice.
 
-If a call says no Hand is selected, call `get_hand()`. If the user has no Hand, offer the routes you can do. If you have an email tool (such as Gmail),
+If a call says no Hand is selected or the Hand is missing, call `get_hand(list=true)`. If the user has no Hand, offer the routes you can do. If you have an email tool (such as Gmail),
 offer to pull about 20 emails they sent. If you can reach Slack or Teams (a connector or a browser tool), offer about 20 of
 their own messages. Ask first and accept a no. Keep only text the user wrote: cut quoted replies, forwards and signatures,
 and skip AI drafts and anything sensitive. Or ask them to paste 5 to 10 things they wrote. A Hand works with fewer, but it sounds generic until it has about 5 to 20 real samples or has learned from feedback.

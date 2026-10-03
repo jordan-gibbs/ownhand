@@ -56,7 +56,7 @@ For clients without browser sign-in, an API key option is described in the docs:
 
 Once connected, say: **"Set up my Ownhand Hand."** If the agent has an email or Slack tool, it offers to pull about 20 messages you sent, after asking, and skips anything you didn't write. Or you paste 5 to 10 things you wrote yourself (Slack messages, emails, PR descriptions). It also asks how you'd describe your writing, then calls `create_hand`. A Hand works with fewer samples but sounds generic until it has about 5 to 20 real ones or has learned from your feedback. Clients that show MCP prompts also list `set_up_my_hand`.
 
-Connected agents use `write` by default for anything you'll send under your own name, even when you don't mention Ownhand, and skip code, notes and summaries. Say not to and they stop. To make the habit stick in clients without memory, paste [`AGENTS.md`](AGENTS.md) into your `CLAUDE.md`, `AGENTS.md`, `.cursorrules` or custom instructions.
+Ownhand is meant for anything you send under your own name, even when you don't mention it. It isn't for code, notes or summaries, and you can opt out in any conversation. To make the habit stick in clients without memory, paste [`AGENTS.md`](AGENTS.md) into your `CLAUDE.md`, `AGENTS.md`, `.cursorrules` or custom instructions.
 
 ## Tools
 
@@ -99,7 +99,7 @@ $1 free to start. Then you add credit and pay for the tokens you use, about half
 - Not stored: thread messages your agent passes as context. They are used for that one request.
 - Not sold, not shared for advertising, and not used to train our own models.
 - Writing and learning run on Muse Spark through OpenRouter's contributor tier, so the provider may use everything Ownhand processes (drafts, samples, thread context, feedback) to improve its models. Don't use Ownhand for text you want kept out of that.
-- You can delete a Hand or revoke a key at any time.
+- You can delete a Hand, revoke a key or disconnect an app at any time.
 
 Read the full policy: https://ownhand.dev/privacy.
 

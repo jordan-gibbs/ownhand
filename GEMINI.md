@@ -20,7 +20,7 @@ Use the `ownhand` MCP tools for anything the user will send as themselves. Do no
    Pass the user's own words as `reason` when they say why. This is how the Hand learns. Always do it.
 5. Put only what the user explicitly asked for (for example "shorter") in `user_instructions`. Never add your own style advice.
 
-If a call says no Hand is selected, call `get_hand()`. If the user has no Hand, ask for 5 to 10 things they wrote themselves
+If a call says no Hand is selected or the Hand is missing, call `get_hand(list=true)`. If the user has no Hand, ask for 5 to 10 things they wrote themselves
 (Slack messages, emails, PR descriptions; no AI drafts) and call `create_hand`, or `update_hand` with `add_samples` for an empty Hand.
 If a call says the user is out of credit, give them the billing link it returns.
 
