@@ -1,7 +1,7 @@
 {
   "name": "ownhand",
   "displayName": "Ownhand",
-  "version": "0.3.5",
+  "version": "0.3.6",
   "description": "Agents, writing like you. Drafts messages, emails, replies and PR descriptions in your own voice, and learns from what you send.",
   "author": {
     "name": "Thalient Labs",

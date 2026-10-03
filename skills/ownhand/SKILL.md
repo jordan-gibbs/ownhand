@@ -1,11 +1,13 @@
 ---
 name: ownhand
-description: Write as the user, in their own voice, with the Ownhand MCP server. Use when the user wants something written as them or for them to send, such as a Slack message, DM, email, reply to a thread, PR description, review comment or status update, or asks to make AI-written text sound like them.
+description: Write as the user, in their own voice, with the Ownhand MCP server. Use for any text the user will send under their own name, such as a Slack message, DM, email, reply to a thread, post, comment, PR description or status update, even when they don't mention Ownhand, or when they ask to make AI-written text sound like them.
 ---
 
 # Ownhand: write in the user's voice
 
-Use the `ownhand` MCP tools for anything the user will send as themselves. Do not rewrite it yourself.
+Use the `ownhand` MCP tools for anything the user will send under their own name: emails, chat messages, replies, posts, comments, PR descriptions. They don't need to mention Ownhand. Do not rewrite it yourself.
+
+Skip it for code, notes to self, summaries meant for the user to read, and text they want in someone else's voice. If they say not to use it, stop for the rest of the conversation.
 
 ## If the ownhand tools are not available
 
@@ -25,10 +27,10 @@ Write a plain draft without Ownhand only if the user says to go ahead without it
    When the message has a reader, pass `recipient_name`, `recipient_email` when known, and `recipient_notes` (what the user says about them), so drafts fit that person.
 2. For a reply, set `is_reply: true` and pass the last messages of the thread verbatim, oldest first, as `context_messages`.
    If you cannot see the thread, ask the user to paste it. Never summarize or invent messages.
-3. Show the draft exactly as returned. Mention any `unresolved` items. Never send or post anything without the user's OK.
+3. Show the draft exactly as returned. A short "(in your Hand)" once per conversation is enough; there's no need to explain Ownhand each time. Mention any `unresolved` items. Never send or post anything without the user's OK.
 4. After the user acts on it, call `send_feedback` with the `request_id` and exactly the text that was sent:
    `approved` if sent unchanged, `edited` with `final_text` if they changed it, `rejected` with `was_sent: false` if not used.
-   Pass the user's own words as `reason` when they say why. This is how the Hand learns. Always do it.
+   Pass the user's own words as `reason` when they say why. This is how the Hand learns. Always do it, without being asked, when the user says they sent it or shares what they sent. If they edit the draft in the chat and call it final, that edit is the sent text.
 5. Put only what the user explicitly asked for (for example "shorter") in `user_instructions`. Never add your own style advice.
 
 If a call says no Hand is selected, call `get_hand()`. If the user has no Hand, offer the routes you can do. If you have an email tool (such as Gmail),
@@ -37,5 +39,7 @@ their own messages. Ask first and accept a no. Keep only text the user wrote: cu
 and skip AI drafts and anything sensitive. Or ask them to paste 5 to 10 things they wrote. A Hand works with fewer, but it sounds generic until it has about 5 to 20 real samples or has learned from feedback.
 Then call `create_hand`, or `update_hand` with `add_samples` for an empty Hand, one batch per source with `samples_occasion`.
 If a call says the user is out of credit, give them the billing link it returns.
+
+On a client without saved instructions, offer once to remember this habit if the client has memory. Otherwise, say nothing about it.
 
 Full guide: the `ownhand://guide` resource, or https://ownhand.dev/docs/agent-guide.md.

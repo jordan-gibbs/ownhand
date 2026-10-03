@@ -56,7 +56,7 @@ For clients without browser sign-in, an API key option is described in the docs:
 
 Once connected, say: **"Set up my Ownhand Hand."** If the agent has an email or Slack tool, it offers to pull about 20 messages you sent, after asking, and skips anything you didn't write. Or you paste 5 to 10 things you wrote yourself (Slack messages, emails, PR descriptions). It also asks how you'd describe your writing, then calls `create_hand`. A Hand works with fewer samples but sounds generic until it has about 5 to 20 real ones or has learned from your feedback. The style card rebuilds as samples grow. Clients that show MCP prompts also list `set_up_my_hand`.
 
-To make your agent use Ownhand without being asked, paste [`AGENTS.md`](AGENTS.md) into your `CLAUDE.md`, `AGENTS.md`, `.cursorrules` or custom instructions.
+Connected agents use `write` by default for anything you'll send under your own name, even when you don't mention Ownhand, and skip code, notes and summaries. Say not to and they stop. To make the habit stick in clients without memory, paste [`AGENTS.md`](AGENTS.md) into your `CLAUDE.md`, `AGENTS.md`, `.cursorrules` or custom instructions.
 
 ## Tools
 
@@ -95,6 +95,7 @@ $1 free to start. Then you add credit and pay for the tokens you use, about half
 ## Privacy
 
 - Stored: your account details, your Hands (samples, style card, learned rules), your requests and the feedback you send.
+- Logged: which tools your agent calls, whether each call worked, how long it took and which app made it, never what the calls contain. Deleted after 90 days.
 - Not stored: thread messages your agent passes as context. They are used for that one request.
 - Not sold, not shared for advertising, and not used to train our own models.
 - Writing and learning run on Muse Spark through OpenRouter's contributor tier, so the provider may use everything Ownhand processes (drafts, samples, thread context, feedback) to improve its models. Don't use Ownhand for text you want kept out of that.
