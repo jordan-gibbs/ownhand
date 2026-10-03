@@ -66,7 +66,8 @@ To make your agent use Ownhand without being asked, paste [`AGENTS.md`](AGENTS.m
 | `send_feedback` | Reports what you did with a draft (`approved`, `edited` with the exact sent text, or `rejected`) so your Hand learns. |
 | `get_hand` | Lists your Hands, or shows what one has learned: style card, rules, sample counts. |
 | `create_hand` | Creates a Hand from texts you wrote yourself. |
-| `update_hand` | Adds samples, sets how you describe your writing, pins, rejects or activates a learned rule, adds, edits or removes custom occasions, or adds, edits or removes people. |
+| `update_hand` | Adds samples, sets how you describe your writing, pins, rejects or activates a learned rule, adds, edits or removes custom occasions, adds, edits or removes people, or rolls back to an earlier version. |
+| `delete_hand` | Deletes a Hand and its history, permanently. |
 | `get_account` | Shows your account, credit balance, recent charges and usage. |
 
 Prompts: `set_up_my_hand`, `teach_my_voice`, `reply_to_thread`, `draft_email`.
