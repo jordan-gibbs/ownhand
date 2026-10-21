@@ -64,9 +64,9 @@ Ownhand is meant for anything you send under your own name, even when you don't 
 |---|---|
 | `write` | Rewrites a draft so it reads like you wrote it, fitted to the occasion. Keeps every fact. Returns the text and a `request_id`. |
 | `send_feedback` | Reports what you did with a draft (`approved`, `edited` with the exact sent text, or `rejected`) so your Hand learns. |
-| `get_hand` | Lists your Hands, or shows what one has learned: style card, rules, sample counts. |
+| `get_hand` | Lists your Hands, or shows what one has learned: style card, rules, sample counts. With `show_samples`, lists the samples themselves. |
 | `create_hand` | Creates a Hand from texts you wrote yourself. |
-| `update_hand` | Adds samples, sets how you describe your writing, pins, rejects or activates a learned rule, adds, edits or removes custom occasions, adds, edits or removes people, or rolls back to an earlier version. |
+| `update_hand` | Adds or removes samples, sets how you describe your writing, pins, rejects or activates a learned rule, adds, edits or removes custom occasions, adds, edits or removes people, or rolls back to an earlier version. |
 | `delete_hand` | Deletes a Hand and its history, permanently. |
 | `get_account` | Shows your account, credit balance, recent charges and usage. |
 

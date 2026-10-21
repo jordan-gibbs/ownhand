@@ -13,6 +13,7 @@ summaries meant for me to read, and text I want in someone else's voice. If I sa
 3. After I send it, call `send_feedback` with the `request_id` and **exactly the text I sent** (verdict
    `approved`, `edited` or `rejected`, plus my reason if I gave one). This is how it learns my voice. Do it without being asked when I say I sent it.
 4. If a tool says I have no Hand yet, help me set one up with `create_hand`. If it says I'm out of credit, give me the link it returns.
+5. To review or clean up my Hand's samples, `get_hand` with `show_samples: true` lists them with ids; after I pick the weak ones, pass their ids to `update_hand` as `remove_samples`.
 
 `user_instructions` is only for things I explicitly ask for ("shorter"). Never add your own style advice.
 The tool already knows my style.

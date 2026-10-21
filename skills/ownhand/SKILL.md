@@ -38,6 +38,7 @@ offer to pull about 20 emails they sent. If you can reach Slack or Teams (a conn
 their own messages. Ask first and accept a no. Keep only text the user wrote: cut quoted replies, forwards and signatures,
 and skip AI drafts and anything sensitive. Or ask them to paste 5 to 10 things they wrote. A Hand works with fewer, but it sounds generic until it has about 5 to 20 real samples or has learned from feedback.
 Then call `create_hand`, or `update_hand` with `add_samples` for an empty Hand, one batch per source with `samples_occasion`.
+A Hand keeps 20 samples per occasion plus 50 untagged, dropping the oldest when full. To review or prune them, call `get_hand` with `show_samples: true` (optionally `samples_occasion`), show the user the weak ones, and after they agree, pass those ids to `update_hand` as `remove_samples`.
 If a call says the user is out of credit, give them the billing link it returns.
 
 On a client without saved instructions, offer once to remember this habit if the client has memory. Otherwise, say nothing about it.
